@@ -1,48 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Jorge Castro | Asesor de Seguros GNP</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #003A8F, #0066CC);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .card {
-            background: rgba(0,0,0,0.3);
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 400px;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 20px;
-            background: #00E676;
-            color: black;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Jorge Castro | Asesor de Seguros GNP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#003A8F,#005FCC);
+    color:white;
+}
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+}
+.hero{
+    text-align:center;
+    margin-bottom:60px;
+}
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+.hero h2{
+    font-size:24px;
+    font-weight:normal;
+}
+.hero p{
+    font-size:18px;
+    margin:20px 0;
+}
+.btn{
+    background:#00E676;
+    color:black;
+    padding:15px 30px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    display:inline-block;
+}
+.section{
+    margin:60px 0;
+}
+.cards{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
+.card{
+    background:rgba(0,0,0,.25);
+    padding:25px;
+    border-radius:15px;
+}
+.card h3{
+    margin-top:0;
+}
+.form{
+    background:rgba(0,0,0,.35);
+    padding:30px;
+    border-radius:15px;
+}
+input, select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:none;
+}
+.footer{
+    text-align:center;
+    font-size:14px;
+    opacity:.8;
+    margin-top:40px;
+}
+</style>
 </head>
+
 <body>
 
-    <div class="card">
-        <h1>Jorge Castro</h1>
-        <h2>Asesor de Seguros GNP</h2>
-        <p>Protege tu vida, tu familia y tu patrimonio.</p>
-        <a href="https://wa.me/526121835809">Cotiza por WhatsApp</a>
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Jorge Castro</h1>
+    <h2>Asesor Profesional de Seguros GNP</h2>
+    <p>Protege tu vida, tu familia y tu patrimonio con respaldo GNP.</p>
+    <a class="btn" href="https://wa.me/526121835809">Cotiza por WhatsApp</a>
+</div>
+
+<!-- SERVICIOS -->
+<div class="section">
+    <h2>Seguros que te protegen hoy y mañana</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>🛡️ Seguro de Vida</h3>
+            <p>Protección económica para tu familia pase lo que pase.</p>
+        </div>
+        <div class="card">
+            <h3>🚗 Seguro de Auto</h3>
+            <p>Tu vehículo protegido contra accidentes, robos y daños.</p>
+        </div>
+        <div class="card">
+            <h3>🏥 Gastos Médicos</h3>
+            <p>Atención médica privada sin afectar tu patrimonio.</p>
+        </div>
+        <div class="card">
+            <h3>💰 Retiro</h3>
+            <p>Construye hoy la tranquilidad de tu futuro.</p>
+        </div>
     </div>
+</div>
+
+<!-- CONFIANZA -->
+<div class="section">
+    <h2>¿Por qué cotizar conmigo?</h2>
+    <div class="cards">
+        <div class="card">✔️ Asesor certificado GNP</div>
+        <div class="card">✔️ Atención personalizada</div>
+        <div class="card">✔️ Respaldo de una aseguradora líder en México</div>
+        <div class="card">✔️ Acompañamiento antes y después de contratar</div>
+    </div>
+</div>
+
+<!-- FORMULARIO -->
+<div class="section">
+    <h2>Cotiza sin compromiso</h2>
+    <div class="form">
+        <form onsubmit="enviarWhatsApp(); return false;">
+            <input id="nombre" type="text" placeholder="Tu nombre" required>
+            <input id="telefono" type="tel" placeholder="Tu WhatsApp" required>
+            <select id="seguro">
+                <option>Seguro de Vida</option>
+                <option>Seguro de Auto</option>
+                <option>Gastos Médicos</option>
+                <option>Retiro</option>
+            </select>
+            <button class="btn" type="submit">Enviar cotización</button>
+        </form>
+    </div>
+</div>
+
+<div class="footer">
+    © 2026 Jorge Castro | Asesor de Seguros GNP
+</div>
+
+</div>
+
+<script>
+function enviarWhatsApp(){
+    let nombre=document.getElementById("nombre").value;
+    let telefono=document.getElementById("telefono").value;
+    let seguro=document.getElementById("seguro").value;
+
+    let mensaje=`Hola, soy ${nombre}. Me interesa cotizar un ${seguro}. Mi WhatsApp es ${telefono}`;
+    let url=`https://wa.me/521TUWHATSAPP?text=${encodeURIComponent(mensaje)}`;
+    window.open(url,"_blank");
+}
+</script>
 
 </body>
 </html>
-
