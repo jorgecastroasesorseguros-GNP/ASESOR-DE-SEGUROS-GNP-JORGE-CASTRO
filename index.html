@@ -2,36 +2,40 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Jorge Castro | Asesor de Seguros GNP</title>
+<title>Jorge Castro | Asesor GNP</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Asesor GNP | Retiro, Ahorro, Gastos Médicos Mayores y Autos. Cotiza por WhatsApp.">
 
 <style>
 :root{
   --naranja:#ff7a00;
-  --oscuro:#1c1c1c;
+  --naranja-osc:#e86c00;
   --gris:#f5f5f5;
 }
 body{
   margin:0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: var(--gris);
+  font-family: Arial, Helvetica, sans-serif;
   color:#333;
 }
 header{
-  background:white;
-  padding:15px 30px;
+  position:sticky;
+  top:0;
+  background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+  z-index:100;
+}
+.nav{
+  max-width:1200px;
+  margin:auto;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  box-shadow:0 2px 10px rgba(0,0,0,.1);
-  position:sticky;
-  top:0;
-  z-index:10;
+  padding:15px 20px;
 }
-header h1{
-  margin:0;
-  color:var(--naranja);
+.logo{
   font-size:22px;
+  font-weight:bold;
+  color:var(--naranja);
 }
 nav a{
   margin-left:20px;
@@ -39,101 +43,75 @@ nav a{
   color:#333;
   font-weight:600;
 }
-nav a:hover{
-  color:var(--naranja);
-}
+nav a:hover{color:var(--naranja);}
+
 .hero{
-  background:linear-gradient(120deg,#ff7a00,#ff9a3c);
-  color:white;
-  padding:80px 20px;
+  background:linear-gradient(135deg,var(--naranja),#ff9a3c);
+  color:#fff;
+  padding:90px 20px;
   text-align:center;
 }
-.hero h2{
-  font-size:42px;
-  margin-bottom:10px;
-}
-.hero p{
-  font-size:20px;
-  max-width:700px;
-  margin:auto;
-}
+.hero h1{font-size:42px;}
+.hero p{font-size:20px; max-width:700px; margin:auto;}
 .btn{
-  margin-top:30px;
   display:inline-block;
-  background:#1c1c1c;
-  color:white;
-  padding:15px 30px;
-  border-radius:30px;
+  margin-top:30px;
+  padding:15px 32px;
+  background:#fff;
+  color:var(--naranja);
+  font-weight:bold;
   text-decoration:none;
-  font-weight:bold;
+  border-radius:40px;
 }
-.container{
-  max-width:1100px;
+
+.section{
+  max-width:1200px;
   margin:auto;
-  padding:60px 20px;
+  padding:80px 20px;
 }
-.tabs{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:10px;
-}
-.tab{
-  padding:12px 20px;
-  border-radius:25px;
-  border:2px solid var(--naranja);
-  cursor:pointer;
-  font-weight:bold;
-  background:white;
-}
-.tab.active{
-  background:var(--naranja);
-  color:white;
-}
-.tab-content{
-  display:none;
-  margin-top:40px;
-  background:white;
-  border-radius:20px;
-  padding:40px;
-  box-shadow:0 5px 20px rgba(0,0,0,.1);
-}
-.tab-content.active{
-  display:block;
-}
-.service{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  align-items:center;
-}
-.service img{
-  width:100%;
-  border-radius:20px;
-}
-.form{
-  margin-top:60px;
-  background:white;
-  padding:40px;
-  border-radius:20px;
-  box-shadow:0 5px 20px rgba(0,0,0,.1);
-}
-input,select{
-  width:100%;
-  padding:14px;
-  margin:10px 0;
-  border-radius:10px;
-  border:1px solid #ccc;
-}
-footer{
-  background:#1c1c1c;
-  color:white;
+.section h2{
   text-align:center;
-  padding:20px;
-  margin-top:60px;
+  font-size:34px;
+  margin-bottom:20px;
 }
-@media(max-width:800px){
-  .service{grid-template-columns:1fr;}
+.section p{
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 40px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.card{
+  background:#fff;
+  border-radius:20px;
+  padding:35px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.card img{
+  width:100%;
+  border-radius:14px;
+  margin-bottom:20px;
+}
+.card h3{color:var(--naranja);}
+
+.cta{
+  background:var(--naranja);
+  color:#fff;
+  text-align:center;
+  padding:80px 20px;
+}
+.cta h2{color:#fff;}
+
+footer{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:30px;
+  font-size:14px;
 }
 </style>
 </head>
@@ -141,214 +119,105 @@ footer{
 <body>
 
 <header>
-  <h1>Jorge Castro | GNP</h1>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <div class="nav">
+    <div class="logo">Jorge Castro | GNP</div>
+    <nav>
+      <a href="#retiro">Retiro</a>
+      <a href="#ahorro">Ahorro</a>
+      <a href="#gmm">Gastos Médicos</a>
+      <a href="#auto">Autos</a>
+      <a href="https://wa.me/5216121835809" target="_blank">WhatsApp</a>
+    </nav>
+  </div>
 </header>
 
-<section id="inicio" class="hero">
-  <h2>Protege lo que más importa</h2>
-  <p>Soluciones de seguros claras, humanas y respaldadas por GNP.  
-     Hoy tomas la decisión, mañana tienes tranquilidad.</p>
-  <a class="btn" href="https://wa.me/521TUWHATSAPP">Hablar por WhatsApp</a>
+<section class="hero">
+  <h1>Protege tu presente y asegura tu futuro</h1>
+  <p>Asesoría profesional en seguros y planes financieros con el respaldo de GNP.</p>
+  <a class="btn" href="https://wa.me/5216121835809" target="_blank">Cotiza por WhatsApp</a>
 </section>
 
-<section id="servicios" class="container">
-
-  <h2 style="text-align:center">Nuestros Seguros</h2>
-
-  <div class="tabs">
-    <div class="tab active" onclick="showTab('vida')">Vida</div>
-    <div class="tab" onclick="showTab('auto')">Auto</div>
-    <div class="tab" onclick="showTab('gmm')">Gastos Médicos</div>
-    <div class="tab" onclick="showTab('retiro')">Retiro</div>
+<!-- RETIRO -->
+<section id="retiro" class="section">
+<h2>Plan de Retiro</h2>
+<p>Construye hoy el ingreso que necesitarás mañana y mantén tu estilo de vida.</p>
+<div class="grid">
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="">
+    <h3>Retiro con estrategia</h3>
+    <p>Ahorro programado adaptado a tu edad e ingresos.</p>
   </div>
-
-  <!-- VIDA -->
-  <<div id="vida" class="tab-content active">
-  <div class="service">
-    <div>
-      <h3>Seguro de Vida con Ahorro para el Retiro</h3>
-
-      <p>
-        Este seguro está diseñado para personas que no solo quieren proteger
-        a su familia, sino también construir desde hoy un respaldo económico
-        para su etapa de retiro.
-      </p>
-
-      <p>
-        Mientras estás protegido con un seguro de vida, realizas aportaciones
-        que te permiten crear un ahorro planeado. Al llegar a la edad de retiro,
-        recibes el monto acumulado conforme a lo contratado.
-      </p>
-
-      <ul>
-        <li>✔ Protección por fallecimiento</li>
-        <li>✔ Ahorro programado para el retiro</li>
-        <li>✔ Posibles beneficios fiscales según la ley vigente</li>
-        <li>✔ Respaldo de Grupo Nacional Provincial (GNP)</li>
-      </ul>
-
-      <p style="margin-top:15px;font-size:15px;">
-        Ideal para quienes buscan tranquilidad hoy y estabilidad financiera mañana.
-      </p>
-
-      <a class="btn"
-         href="https://www.gnp.com.mx/seguro-de-vida-consolida-tu-retiro"
-         target="_blank">
-         Ver información oficial GNP
-      </a>
-
-      <p style="font-size:12px;opacity:.6">
-Este sitio es operado por un asesor independiente.
-Los productos están respaldados por Grupo Nacional Provincial, S.A.B.
-Consulta términos y condiciones en gnp.com.mx
-      </p>
-    </div>
-
-    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Seguro de Vida y Retiro">
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818" alt="">
+    <h3>Protección incluida</h3>
+    <p>Respaldo económico para tu familia.</p>
   </div>
 </div>
-  <!-- AUTO -->
-  <div id="auto" class="tab-content">
-    <div class="service">
-      <div>
-        <h3>Seguro de Auto</h3>
-        <p>Un accidente puede cambiarlo todo.  
-        Maneja con tranquilidad y respaldo total.</p>
-      </div>
-      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="">
-    </div>
-  </div>
-
-  <!-- GMM -->
-  <div id="gmm" class="tab-content">
-  <div class="service">
-    <div>
-      <h3>Seguro de Gastos Médicos Mayores</h3>
-
-      <p>
-        Una enfermedad o accidente grave puede afectar no solo tu salud,
-        sino también tus ahorros y tu patrimonio.
-      </p>
-
-      <p>
-        Este seguro te brinda acceso a atención médica privada, hospitales
-        y especialistas, ayudándote a enfrentar imprevistos sin poner en riesgo
-        la estabilidad financiera de tu familia.
-      </p>
-
-      <ul>
-        <li>✔ Atención médica privada</li>
-        <li>✔ Cobertura hospitalaria y quirúrgica</li>
-        <li>✔ Protección ante enfermedades graves y accidentes</li>
-        <li>✔ Respaldo de Grupo Nacional Provincial (GNP)</li>
-      </ul>
-
-      <p style="margin-top:15px;font-size:15px;">
-        Pensado para quienes quieren cuidar su salud sin comprometer su patrimonio.
-      </p>
-
-      <a class="btn"
-         href="https://www.gnp.com.mx/seguros/gastos-medicos-mayores"
-         target="_blank">
-         Ver información oficial GNP
-      </a>
-
-      <p style="font-size:12px;opacity:.7;margin-top:10px;">
-        Información de referencia. Las coberturas están sujetas a los términos
-        y condiciones oficiales de GNP.
-      </p>
-    </div>
-
-    <img src="https://images.unsplash.com/photo-1580281657527-47f249e8f2b1" alt="Seguro de Gastos Médicos Mayores">
-  </div>
-
-  <!-- RETIRO -->
-  <div id="retiro" class="tab-content">
-  <div class="service">
-    <div>
-      <h3>Plan de Retiro con Respaldo GNP</h3>
-
-      <p>
-        El retiro no llega de un día para otro, se construye con decisiones
-        tomadas a tiempo.
-      </p>
-
-      <p>
-        Un plan de retiro te permite generar un ahorro programado para mantener
-        tu estilo de vida cuando dejes de trabajar, contando además con el respaldo
-        de una aseguradora sólida.
-      </p>
-
-      <ul>
-        <li>✔ Ahorro a largo plazo para el retiro</li>
-        <li>✔ Planeación financiera desde hoy</li>
-        <li>✔ Posibles beneficios fiscales según la ley vigente</li>
-        <li>✔ Respaldo de Grupo Nacional Provincial (GNP)</li>
-      </ul>
-
-      <p style="margin-top:15px;font-size:15px;">
-        Ideal para quienes desean independencia financiera en el futuro.
-      </p>
-
-      <a class="btn"
-         href="https://www.gnp.com.mx/seguro-de-vida-consolida-tu-retiro"
-         target="_blank">
-         Ver información oficial GNP
-      </a>
-
-      <p style="font-size:12px;opacity:.7;margin-top:10px;">
-        Información de referencia. Condiciones sujetas a términos oficiales de GNP.
-      </p>
-    </div>
-
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Plan de Retiro">
-  </div>
-</div>
-  </div>
-
 </section>
 
-<section id="contacto" class="container">
-  <h2>Cotiza sin compromiso</h2>
-  <div class="form">
-    <form onsubmit="sendWhats(); return false;">
-      <input id="nombre" placeholder="Nombre" required>
-      <input id="tel" placeholder="WhatsApp" required>
-      <select id="seg">
-        <option>Seguro de Vida</option>
-        <option>Seguro de Auto</option>
-        <option>Gastos Médicos</option>
-        <option>Retiro</option>
-      </select>
-      <button class="btn" type="submit">Recibir información</button>
-    </form>
+<!-- AHORRO -->
+<section id="ahorro" class="section" style="background:var(--gris);">
+<h2>Planes de Ahorro</h2>
+<p>Haz crecer tu dinero con disciplina y objetivos claros.</p>
+<div class="grid">
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1565372910294-0f6e1a3b3c63" alt="">
+    <h3>Ahorro flexible</h3>
+    <p>Aportaciones mensuales o anuales según tu posibilidad.</p>
   </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1" alt="">
+    <h3>Metas claras</h3>
+    <p>Educación, patrimonio o proyectos personales.</p>
+  </div>
+</div>
+</section>
+
+<!-- GMM -->
+<section id="gmm" class="section">
+<h2>Gastos Médicos Mayores</h2>
+<p>Protección médica para ti y tu familia ante imprevistos.</p>
+<div class="grid">
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1580281657521-6c4a6b6a1b1d" alt="">
+    <h3>Hospitales privados</h3>
+    <p>Acceso a atención médica de calidad.</p>
+  </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309" alt="">
+    <h3>Tranquilidad financiera</h3>
+    <p>Evita que una emergencia afecte tu economía.</p>
+  </div>
+</div>
+</section>
+
+<!-- AUTOS -->
+<section id="auto" class="section" style="background:var(--gris);">
+<h2>Seguro de Auto</h2>
+<p>Maneja con la tranquilidad de estar bien protegido.</p>
+<div class="grid">
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="">
+    <h3>Cobertura amplia</h3>
+    <p>Daños, robo y responsabilidad civil.</p>
+  </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1517940310602-26535839fe84" alt="">
+    <h3>Asistencia vial</h3>
+    <p>Apoyo cuando más lo necesitas.</p>
+  </div>
+</div>
+</section>
+
+<section class="cta">
+<h2>Cotiza sin compromiso</h2>
+<p>Agenda tu asesoría personalizada ahora mismo.</p>
+<a class="btn" href="https://wa.me/5216121835809" target="_blank">Hablar por WhatsApp</a>
 </section>
 
 <footer>
-  © 2026 Jorge Castro · Asesor de Seguros GNP
+© 2026 Jorge Castro | Asesor de Seguros GNP
 </footer>
-
-<script>
-function showTab(id){
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
-  event.target.classList.add('active');
-  document.getElementById(id).classList.add('active');
-}
-function sendWhats(){
-  let n=document.getElementById('nombre').value;
-  let t=document.getElementById('tel').value;
-  let s=document.getElementById('seg').value;
-  let msg=`Hola, soy ${n}. Me interesa cotizar ${s}. Mi WhatsApp es ${t}`;
-  window.open(`https://wa.me/521TUWHATSAPP?text=${encodeURIComponent(msg)}`);
-}
-</script>
 
 </body>
 </html>
