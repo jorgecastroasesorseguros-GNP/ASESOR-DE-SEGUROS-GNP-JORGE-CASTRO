@@ -6,158 +6,347 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#003A8F,#005FCC);
-    color:white;
+:root{
+  --naranja:#ff7a00;
+  --oscuro:#1c1c1c;
+  --gris:#f5f5f5;
 }
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:40px 20px;
+body{
+  margin:0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--gris);
+  color:#333;
+}
+header{
+  background:white;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,.1);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+header h1{
+  margin:0;
+  color:var(--naranja);
+  font-size:22px;
+}
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+}
+nav a:hover{
+  color:var(--naranja);
 }
 .hero{
-    text-align:center;
-    margin-bottom:60px;
-}
-.hero h1{
-    font-size:42px;
-    margin-bottom:10px;
+  background:linear-gradient(120deg,#ff7a00,#ff9a3c);
+  color:white;
+  padding:80px 20px;
+  text-align:center;
 }
 .hero h2{
-    font-size:24px;
-    font-weight:normal;
+  font-size:42px;
+  margin-bottom:10px;
 }
 .hero p{
-    font-size:18px;
-    margin:20px 0;
+  font-size:20px;
+  max-width:700px;
+  margin:auto;
 }
 .btn{
-    background:#00E676;
-    color:black;
-    padding:15px 30px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-    display:inline-block;
+  margin-top:30px;
+  display:inline-block;
+  background:#1c1c1c;
+  color:white;
+  padding:15px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
 }
-.section{
-    margin:60px 0;
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
 }
-.cards{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
-    gap:20px;
+.tabs{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
 }
-.card{
-    background:rgba(0,0,0,.25);
-    padding:25px;
-    border-radius:15px;
+.tab{
+  padding:12px 20px;
+  border-radius:25px;
+  border:2px solid var(--naranja);
+  cursor:pointer;
+  font-weight:bold;
+  background:white;
 }
-.card h3{
-    margin-top:0;
+.tab.active{
+  background:var(--naranja);
+  color:white;
+}
+.tab-content{
+  display:none;
+  margin-top:40px;
+  background:white;
+  border-radius:20px;
+  padding:40px;
+  box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+.tab-content.active{
+  display:block;
+}
+.service{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+.service img{
+  width:100%;
+  border-radius:20px;
 }
 .form{
-    background:rgba(0,0,0,.35);
-    padding:30px;
-    border-radius:15px;
+  margin-top:60px;
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,.1);
 }
-input, select{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border-radius:8px;
-    border:none;
+input,select{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ccc;
 }
-.footer{
-    text-align:center;
-    font-size:14px;
-    opacity:.8;
-    margin-top:40px;
+footer{
+  background:#1c1c1c;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:60px;
+}
+@media(max-width:800px){
+  .service{grid-template-columns:1fr;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+  <h1>Jorge Castro | GNP</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>Jorge Castro</h1>
-    <h2>Asesor Profesional de Seguros GNP</h2>
-    <p>Protege tu vida, tu familia y tu patrimonio con respaldo GNP.</p>
-    <a class="btn" href="https://wa.me/526121835809">Cotiza por WhatsApp</a>
-</div>
+<section id="inicio" class="hero">
+  <h2>Protege lo que más importa</h2>
+  <p>Soluciones de seguros claras, humanas y respaldadas por GNP.  
+     Hoy tomas la decisión, mañana tienes tranquilidad.</p>
+  <a class="btn" href="https://wa.me/521TUWHATSAPP">Hablar por WhatsApp</a>
+</section>
 
-<!-- SERVICIOS -->
-<div class="section">
-    <h2>Seguros que te protegen hoy y mañana</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>🛡️ Seguro de Vida</h3>
-            <p>Protección económica para tu familia pase lo que pase.</p>
-        </div>
-        <div class="card">
-            <h3>🚗 Seguro de Auto</h3>
-            <p>Tu vehículo protegido contra accidentes, robos y daños.</p>
-        </div>
-        <div class="card">
-            <h3>🏥 Gastos Médicos</h3>
-            <p>Atención médica privada sin afectar tu patrimonio.</p>
-        </div>
-        <div class="card">
-            <h3>💰 Retiro</h3>
-            <p>Construye hoy la tranquilidad de tu futuro.</p>
-        </div>
+<section id="servicios" class="container">
+
+  <h2 style="text-align:center">Nuestros Seguros</h2>
+
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('vida')">Vida</div>
+    <div class="tab" onclick="showTab('auto')">Auto</div>
+    <div class="tab" onclick="showTab('gmm')">Gastos Médicos</div>
+    <div class="tab" onclick="showTab('retiro')">Retiro</div>
+  </div>
+
+  <!-- VIDA -->
+  <<div id="vida" class="tab-content active">
+  <div class="service">
+    <div>
+      <h3>Seguro de Vida con Ahorro para el Retiro</h3>
+
+      <p>
+        Este seguro está diseñado para personas que no solo quieren proteger
+        a su familia, sino también construir desde hoy un respaldo económico
+        para su etapa de retiro.
+      </p>
+
+      <p>
+        Mientras estás protegido con un seguro de vida, realizas aportaciones
+        que te permiten crear un ahorro planeado. Al llegar a la edad de retiro,
+        recibes el monto acumulado conforme a lo contratado.
+      </p>
+
+      <ul>
+        <li>✔ Protección por fallecimiento</li>
+        <li>✔ Ahorro programado para el retiro</li>
+        <li>✔ Posibles beneficios fiscales según la ley vigente</li>
+        <li>✔ Respaldo de Grupo Nacional Provincial (GNP)</li>
+      </ul>
+
+      <p style="margin-top:15px;font-size:15px;">
+        Ideal para quienes buscan tranquilidad hoy y estabilidad financiera mañana.
+      </p>
+
+      <a class="btn"
+         href="https://www.gnp.com.mx/seguro-de-vida-consolida-tu-retiro"
+         target="_blank">
+         Ver información oficial GNP
+      </a>
+
+      <p style="font-size:12px;opacity:.6">
+Este sitio es operado por un asesor independiente.
+Los productos están respaldados por Grupo Nacional Provincial, S.A.B.
+Consulta términos y condiciones en gnp.com.mx
+      </p>
     </div>
-</div>
 
-<!-- CONFIANZA -->
-<div class="section">
-    <h2>¿Por qué cotizar conmigo?</h2>
-    <div class="cards">
-        <div class="card">✔️ Asesor certificado GNP</div>
-        <div class="card">✔️ Atención personalizada</div>
-        <div class="card">✔️ Respaldo de una aseguradora líder en México</div>
-        <div class="card">✔️ Acompañamiento antes y después de contratar</div>
+    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Seguro de Vida y Retiro">
+  </div>
+</div>
+  <!-- AUTO -->
+  <div id="auto" class="tab-content">
+    <div class="service">
+      <div>
+        <h3>Seguro de Auto</h3>
+        <p>Un accidente puede cambiarlo todo.  
+        Maneja con tranquilidad y respaldo total.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="">
     </div>
-</div>
+  </div>
 
-<!-- FORMULARIO -->
-<div class="section">
-    <h2>Cotiza sin compromiso</h2>
-    <div class="form">
-        <form onsubmit="enviarWhatsApp(); return false;">
-            <input id="nombre" type="text" placeholder="Tu nombre" required>
-            <input id="telefono" type="tel" placeholder="Tu WhatsApp" required>
-            <select id="seguro">
-                <option>Seguro de Vida</option>
-                <option>Seguro de Auto</option>
-                <option>Gastos Médicos</option>
-                <option>Retiro</option>
-            </select>
-            <button class="btn" type="submit">Enviar cotización</button>
-        </form>
+  <!-- GMM -->
+  <div id="gmm" class="tab-content">
+  <div class="service">
+    <div>
+      <h3>Seguro de Gastos Médicos Mayores</h3>
+
+      <p>
+        Una enfermedad o accidente grave puede afectar no solo tu salud,
+        sino también tus ahorros y tu patrimonio.
+      </p>
+
+      <p>
+        Este seguro te brinda acceso a atención médica privada, hospitales
+        y especialistas, ayudándote a enfrentar imprevistos sin poner en riesgo
+        la estabilidad financiera de tu familia.
+      </p>
+
+      <ul>
+        <li>✔ Atención médica privada</li>
+        <li>✔ Cobertura hospitalaria y quirúrgica</li>
+        <li>✔ Protección ante enfermedades graves y accidentes</li>
+        <li>✔ Respaldo de Grupo Nacional Provincial (GNP)</li>
+      </ul>
+
+      <p style="margin-top:15px;font-size:15px;">
+        Pensado para quienes quieren cuidar su salud sin comprometer su patrimonio.
+      </p>
+
+      <a class="btn"
+         href="https://www.gnp.com.mx/seguros/gastos-medicos-mayores"
+         target="_blank">
+         Ver información oficial GNP
+      </a>
+
+      <p style="font-size:12px;opacity:.7;margin-top:10px;">
+        Información de referencia. Las coberturas están sujetas a los términos
+        y condiciones oficiales de GNP.
+      </p>
     </div>
-</div>
 
-<div class="footer">
-    © 2026 Jorge Castro | Asesor de Seguros GNP
-</div>
+    <img src="https://images.unsplash.com/photo-1580281657527-47f249e8f2b1" alt="Seguro de Gastos Médicos Mayores">
+  </div>
 
+  <!-- RETIRO -->
+  <div id="retiro" class="tab-content">
+  <div class="service">
+    <div>
+      <h3>Plan de Retiro con Respaldo GNP</h3>
+
+      <p>
+        El retiro no llega de un día para otro, se construye con decisiones
+        tomadas a tiempo.
+      </p>
+
+      <p>
+        Un plan de retiro te permite generar un ahorro programado para mantener
+        tu estilo de vida cuando dejes de trabajar, contando además con el respaldo
+        de una aseguradora sólida.
+      </p>
+
+      <ul>
+        <li>✔ Ahorro a largo plazo para el retiro</li>
+        <li>✔ Planeación financiera desde hoy</li>
+        <li>✔ Posibles beneficios fiscales según la ley vigente</li>
+        <li>✔ Respaldo de Grupo Nacional Provincial (GNP)</li>
+      </ul>
+
+      <p style="margin-top:15px;font-size:15px;">
+        Ideal para quienes desean independencia financiera en el futuro.
+      </p>
+
+      <a class="btn"
+         href="https://www.gnp.com.mx/seguro-de-vida-consolida-tu-retiro"
+         target="_blank">
+         Ver información oficial GNP
+      </a>
+
+      <p style="font-size:12px;opacity:.7;margin-top:10px;">
+        Información de referencia. Condiciones sujetas a términos oficiales de GNP.
+      </p>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Plan de Retiro">
+  </div>
 </div>
+  </div>
+
+</section>
+
+<section id="contacto" class="container">
+  <h2>Cotiza sin compromiso</h2>
+  <div class="form">
+    <form onsubmit="sendWhats(); return false;">
+      <input id="nombre" placeholder="Nombre" required>
+      <input id="tel" placeholder="WhatsApp" required>
+      <select id="seg">
+        <option>Seguro de Vida</option>
+        <option>Seguro de Auto</option>
+        <option>Gastos Médicos</option>
+        <option>Retiro</option>
+      </select>
+      <button class="btn" type="submit">Recibir información</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © 2026 Jorge Castro · Asesor de Seguros GNP
+</footer>
 
 <script>
-function enviarWhatsApp(){
-    let nombre=document.getElementById("nombre").value;
-    let telefono=document.getElementById("telefono").value;
-    let seguro=document.getElementById("seguro").value;
-
-    let mensaje=`Hola, soy ${nombre}. Me interesa cotizar un ${seguro}. Mi WhatsApp es ${telefono}`;
-    let url=`https://wa.me/521TUWHATSAPP?text=${encodeURIComponent(mensaje)}`;
-    window.open(url,"_blank");
+function showTab(id){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+function sendWhats(){
+  let n=document.getElementById('nombre').value;
+  let t=document.getElementById('tel').value;
+  let s=document.getElementById('seg').value;
+  let msg=`Hola, soy ${n}. Me interesa cotizar ${s}. Mi WhatsApp es ${t}`;
+  window.open(`https://wa.me/521TUWHATSAPP?text=${encodeURIComponent(msg)}`);
 }
 </script>
 
