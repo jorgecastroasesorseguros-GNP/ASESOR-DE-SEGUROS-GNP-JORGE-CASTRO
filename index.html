@@ -1,240 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Jorge Castro | Asesor Profesional GNP</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Asesor profesional GNP. Retiro, Ahorro, Gastos Médicos Mayores y Autos.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jorge Castro | Asesor de Seguros GNP</title>
 
-<style>
-:root{
-  --naranja:#ff7a00;
-  --gris:#f4f4f4;
-  --oscuro:#1f1f1f;
-}
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:'Segoe UI', Arial, sans-serif;
-  color:#333;
-  background:#fff;
-}
-header{
-  position:sticky;
-  top:0;
-  background:#fff;
-  box-shadow:0 4px 20px rgba(0,0,0,.08);
-  z-index:100;
-}
-.nav{
-  max-width:1200px;
-  margin:auto;
-  padding:18px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.logo{
-  font-size:24px;
-  font-weight:700;
-  color:var(--naranja);
-}
-.menu button{
-  background:none;
-  border:none;
-  margin-left:24px;
-  font-size:16px;
-  cursor:pointer;
-  font-weight:600;
-}
-.menu button.active,
-.menu button:hover{color:var(--naranja)}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #333;
+    }
 
-.hero{
-  background:linear-gradient(135deg,var(--naranja),#ff9b45);
-  color:#fff;
-  padding:110px 20px;
-}
-.hero-inner{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:40px;
-  align-items:center;
-}
-.hero h1{font-size:44px}
-.hero p{font-size:20px}
-.hero-card{
-  background:#fff;
-  color:#333;
-  padding:40px;
-  border-radius:24px;
-  box-shadow:0 20px 40px rgba(0,0,0,.15);
-}
-.btn{
-  display:inline-block;
-  padding:15px 32px;
-  background:var(--naranja);
-  color:#fff;
-  border-radius:40px;
-  text-decoration:none;
-  font-weight:700;
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
 
-.section{
-  max-width:1200px;
-  margin:auto;
-  padding:90px 20px;
-  display:none;
-}
-.section.active{display:block}
+    header h1 {
+      color: #f57c00;
+      font-size: 22px;
+      margin: 0;
+    }
 
-.section h2{
-  font-size:36px;
-  text-align:center;
-  margin-bottom:20px;
-}
-.section p.center{
-  max-width:850px;
-  margin:0 auto 50px;
-  text-align:center;
-  font-size:18px;
-}
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:35px;
-}
-.card{
-  background:#fff;
-  border-radius:24px;
-  padding:40px;
-  box-shadow:0 15px 35px rgba(0,0,0,.08);
-}
-.card h3{color:var(--naranja)}
+    nav a:hover {
+      color: #f57c00;
+    }
 
-.highlight{
-  background:var(--gris);
-  border-left:6px solid var(--naranja);
-  padding:30px;
-  border-radius:16px;
-  margin-top:40px;
-}
+    .hero {
+      background: linear-gradient(135deg, #ff9800, #f57c00);
+      color: white;
+      padding: 100px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-.cta{
-  background:var(--oscuro);
-  color:#fff;
-  text-align:center;
-  padding:90px 20px;
-}
-footer{
-  background:#111;
-  color:#bbb;
-  text-align:center;
-  padding:30px;
-  font-size:14px;
-}
-</style>
+    .hero-text {
+      max-width: 600px;
+    }
 
-<script>
-function tab(id){
-  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-  document.querySelectorAll('.menu button').forEach(b=>b.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  document.getElementById('btn-'+id).classList.add('active');
-}
-</script>
+    .hero h2 {
+      font-size: 46px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: white;
+      color: #f57c00;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      max-width: 400px;
+    }
+
+    section {
+      padding: 80px 60px;
+    }
+
+    section h3 {
+      font-size: 36px;
+      color: #f57c00;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 17px;
+      line-height: 1.7;
+      max-width: 900px;
+    }
+
+    .cta {
+      background: #f57c00;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .cta h3 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="nav">
-    <div class="logo">Jorge Castro | GNP</div>
-    <div class="menu">
-      <button id="btn-retiro" class="active" onclick="tab('retiro')">Retiro</button>
-      <button id="btn-ahorro" onclick="tab('ahorro')">Ahorro</button>
-      <button id="btn-gmm" onclick="tab('gmm')">Gastos Médicos</button>
-      <button id="btn-auto" onclick="tab('auto')">Autos</button>
-    </div>
-  </div>
+  <h1>Jorge Castro | GNP</h1>
+  <nav>
+    <a href="#ahorro">Ahorro</a>
+    <a href="#retiro">Retiro</a>
+    <a href="#gastos">Gastos Médicos</a>
+    <a href="#autos">Autos</a>
+  </nav>
 </header>
 
 <section class="hero">
-  <div class="hero-inner">
-    <div>
-      <h1>Planeación financiera con respaldo profesional</h1>
-      <p>Protección, ahorro y tranquilidad para ti y tu familia con el respaldo de GNP.</p>
-      <a class="btn" href="https://wa.me/5216121835809" target="_blank">Hablar por WhatsApp</a>
-    </div>
-    <div class="hero-card">
-      <h3>Asesoría personalizada</h3>
-      <p>Diseño estrategias claras según tu edad, ingresos y objetivos financieros.</p>
-      <p><strong>✔ Sin compromiso</strong></p>
-      <p><strong>✔ Atención directa</strong></p>
-    </div>
+  <div class="hero-text">
+    <h2>Planeación financiera con respaldo profesional</h2>
+    <p>
+      Protege tu presente y construye un futuro sólido para ti y tu familia
+      con soluciones financieras diseñadas a tu medida y el respaldo de GNP.
+    </p>
+    <a class="btn" href="https://wa.me/526121835809" target="_blank">
+      Hablar por WhatsApp
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Asesoría personalizada</h3>
+    <p>
+      Diseño estrategias claras de protección, ahorro e inversión de acuerdo
+      a tu edad, ingresos y objetivos financieros.
+    </p>
+    <p>✔ Sin compromiso<br>✔ Atención directa</p>
   </div>
 </section>
 
-<!-- RETIRO -->
-<section id="retiro" class="section active">
-<h2>Plan de Retiro</h2>
-<p class="center">Construye hoy el ingreso que disfrutarás mañana.</p>
-<div class="grid">
-  <div class="card"><h3>Ingreso garantizado</h3><p>Capital para mantener tu estilo de vida.</p></div>
-  <div class="card"><h3>Disciplina financiera</h3><p>Aportaciones diseñadas a tu medida.</p></div>
-  <div class="card"><h3>Protección familiar</h3><p>Respaldo para quienes más quieres.</p></div>
-</div>
-<div class="highlight">
-Ideal para personas de 25 a 55 años que desean independencia financiera.
-</div>
+<section id="ahorro">
+  <h3>Ahorro</h3>
+  <p>
+    Los planes de ahorro con GNP te permiten crear un fondo financiero de forma
+    disciplinada y segura. A través de aportaciones programadas, puedes alcanzar
+    metas importantes como la educación de tus hijos, proyectos personales o
+    generar un capital para el futuro, siempre con protección y respaldo.
+  </p>
 </section>
 
-<!-- AHORRO -->
-<section id="ahorro" class="section">
-<h2>Planes de Ahorro</h2>
-<p class="center">Convierte tu esfuerzo mensual en patrimonio.</p>
-<div class="grid">
-  <div class="card"><h3>Ahorro flexible</h3><p>Pagos ajustados a tus ingresos.</p></div>
-  <div class="card"><h3>Objetivos claros</h3><p>Educación, viajes o patrimonio.</p></div>
-  <div class="card"><h3>Crecimiento constante</h3><p>Planeación a mediano y largo plazo.</p></div>
-</div>
+<section id="retiro">
+  <h3>Retiro</h3>
+  <p>
+    Planear tu retiro con anticipación es la clave para mantener tu calidad de
+    vida. Los planes de retiro están diseñados para ayudarte a generar ingresos
+    futuros, protegerte ante imprevistos y disfrutar una etapa de tranquilidad
+    financiera cuando llegue el momento de dejar de trabajar.
+  </p>
 </section>
 
-<!-- GMM -->
-<section id="gmm" class="section">
-<h2>Gastos Médicos Mayores</h2>
-<p class="center">Atención médica privada sin afectar tu economía.</p>
-<div class="grid">
-  <div class="card"><h3>Hospitales privados</h3><p>Red médica de calidad.</p></div>
-  <div class="card"><h3>Emergencias cubiertas</h3><p>Tranquilidad ante imprevistos.</p></div>
-  <div class="card"><h3>Protección total</h3><p>Para ti y tu familia.</p></div>
-</div>
+<section id="gastos">
+  <h3>Gastos Médicos Mayores</h3>
+  <p>
+    Un seguro de gastos médicos mayores te brinda acceso a hospitales privados,
+    atención médica de calidad y protección ante gastos inesperados que pueden
+    afectar seriamente tu patrimonio. La salud es una prioridad, y contar con
+    respaldo hace la diferencia.
+  </p>
 </section>
 
-<!-- AUTO -->
-<section id="auto" class="section">
-<h2>Seguro de Auto</h2>
-<p class="center">Maneja protegido en todo momento.</p>
-<div class="grid">
-  <div class="card"><h3>Daños y robo</h3><p>Coberturas completas.</p></div>
-  <div class="card"><h3>Asistencia vial</h3><p>Apoyo 24/7.</p></div>
-  <div class="card"><h3>Respaldo legal</h3><p>Protección ante cualquier siniestro.</p></div>
-</div>
+<section id="autos">
+  <h3>Seguro de Autos</h3>
+  <p>
+    Protege tu vehículo y tu tranquilidad con un seguro que te respalde ante
+    accidentes, daños a terceros y situaciones imprevistas. Un seguro de auto
+    no solo cuida tu patrimonio, también te brinda apoyo cuando más lo necesitas.
+  </p>
 </section>
 
 <section class="cta">
-<h2>Agenda tu asesoría personalizada</h2>
-<p>Da el primer paso hacia tu tranquilidad financiera.</p>
-<a class="btn" href="https://wa.me/5216121835809" target="_blank">Contactar por WhatsApp</a>
+  <h3>Agenda tu asesoría hoy mismo</h3>
+  <p>
+    Recibe atención directa, clara y profesional para elegir la mejor opción
+    según tus necesidades.
+  </p>
+  <a class="btn" href="https://wa.me/526121835809" target="_blank">
+    Contactar por WhatsApp
+  </a>
 </section>
 
 <footer>
-© 2026 Jorge Castro | Asesor Profesional GNP
+  © 2026 Jorge Castro | Asesor de Seguros GNP  
+  <br>
+  Atención personalizada · Planeación financiera · Protección patrimonial
 </footer>
 
 </body>
 </html>
-
