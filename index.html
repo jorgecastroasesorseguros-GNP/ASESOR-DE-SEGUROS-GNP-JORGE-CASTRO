@@ -120,15 +120,52 @@
 <body>
 
 <header>
+    /* HEADER */
+header {
+  background: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* LOGO Y NOMBRE */
+header h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #003a8f;
+}
+
+/* MENU */
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 5px;
+}
+
+nav a:hover {
+  color: #ff7a00;
+  border-bottom: 2px solid #ff7a00;
+}
+
    <div style="display:flex; align-items:center; gap:15px;">
     <img src="logo-gnp.png" alt="GNP Seguros" style="height:45px;">
     <h1>Jorge Castro</h1>
 </div>
-   <nav>
+ <nav>
+  <a href="index.html">Inicio</a>
   <a href="ahorro.html">Ahorro</a>
   <a href="retiro.html">Retiro</a>
   <a href="gastos-medicos.html">Gastos Médicos</a>
   <a href="autos.html">Autos</a>
+  <a href="perfil.html">Mi Perfil</a>
 </nav>
     </nav>
 </header>
