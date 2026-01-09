@@ -5,57 +5,66 @@
     <title>Jorge Castro | Asesor de Seguros GNP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO básico -->
+    <!-- SEO -->
     <meta name="description" content="Jorge Castro, Asesor de Seguros GNP. Planeación financiera, ahorro, retiro, gastos médicos y seguros de auto. Atención personalizada.">
     <meta name="keywords" content="GNP, seguros, ahorro, retiro, gastos médicos, seguro de auto, asesor GNP">
 
-    <!-- Google Font -->
+    <!-- Fuente -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
-            background-color: #ffffff;
             color: #333;
+            background: #fff;
         }
 
+        /* HEADER */
         header {
-            background: #ffffff;
-            padding: 20px 60px;
+            background: white;
+            padding: 15px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         header h1 {
-            color: #f57c00;
-            font-size: 22px;
+            font-size: 20px;
             margin: 0;
+            color: #f57c00;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
         }
 
         nav a {
-            margin-left: 25px;
             text-decoration: none;
-            color: #333;
             font-weight: 600;
+            color: #333;
+            padding-bottom: 5px;
         }
 
         nav a:hover {
             color: #f57c00;
+            border-bottom: 2px solid #f57c00;
         }
 
+        /* HERO */
         .hero {
             background: linear-gradient(135deg, #ff8f1f, #ff6f00);
-            color: #fff;
+            color: white;
             padding: 100px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 40px;
         }
 
         .hero-text {
@@ -76,7 +85,7 @@
             display: inline-block;
             margin-top: 30px;
             background: #25D366;
-            color: #fff;
+            color: white;
             padding: 15px 30px;
             border-radius: 30px;
             text-decoration: none;
@@ -84,13 +93,15 @@
         }
 
         .card {
-            background: #fff;
+            background: white;
             border-radius: 20px;
             padding: 40px;
             max-width: 420px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            color: #333;
         }
 
+        /* SECCIONES */
         section {
             padding: 80px 60px;
         }
@@ -120,53 +131,18 @@
 <body>
 
 <header>
-    /* HEADER */
-header {
-  background: white;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-}
+    <div style="display:flex; align-items:center; gap:15px;">
+        <img src="logo-gnp.png" alt="GNP Seguros" style="height:45px;">
+        <h1>Jorge Castro</h1>
+    </div>
 
-/* LOGO Y NOMBRE */
-header h1 {
-  font-size: 20px;
-  margin: 0;
-  color: #003a8f;
-}
-
-/* MENU */
-nav {
-  display: flex;
-  gap: 25px;
-}
-
-nav a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #333;
-  padding-bottom: 5px;
-}
-
-nav a:hover {
-  color: #ff7a00;
-  border-bottom: 2px solid #ff7a00;
-}
-
-   <div style="display:flex; align-items:center; gap:15px;">
-    <img src="logo-gnp.png" alt="GNP Seguros" style="height:45px;">
-    <h1>Jorge Castro</h1>
-</div>
- <nav>
-  <a href="index.html">Inicio</a>
-  <a href="ahorro.html">Ahorro</a>
-  <a href="retiro.html">Retiro</a>
-  <a href="gastos-medicos.html">Gastos Médicos</a>
-  <a href="autos.html">Autos</a>
-  <a href="perfil.html">Mi Perfil</a>
-</nav>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="ahorro.html">Ahorro</a>
+        <a href="retiro.html">Retiro</a>
+        <a href="gastos-medicos.html">Gastos Médicos</a>
+        <a href="autos.html">Autos</a>
+        <a href="perfil.html">Mi Perfil</a>
     </nav>
 </header>
 
@@ -195,43 +171,35 @@ nav a:hover {
     </div>
 </section>
 
-<section id="ahorro">
+<section>
     <h3>Ahorro</h3>
     <p>
-        Los planes de ahorro están pensados para ayudarte a construir
-        un futuro sólido mediante aportaciones programadas que se adaptan
-        a tus posibilidades. Son ideales para crear hábitos financieros,
-        cumplir metas importantes y generar estabilidad económica a largo plazo,
-        siempre con respaldo y disciplina.
+        Planes diseñados para crear disciplina financiera, cumplir metas
+        y generar estabilidad económica a mediano y largo plazo.
     </p>
 </section>
 
-<section id="retiro">
+<section>
     <h3>Retiro</h3>
     <p>
-        Planear el retiro con anticipación permite mantener tu calidad de vida
-        cuando llegue el momento de dejar de trabajar. A través de una estrategia
-        adecuada, puedes generar ingresos futuros que te brinden tranquilidad,
-        independencia y seguridad financiera.
+        Estrategias enfocadas en mantener tu calidad de vida futura,
+        asegurando ingresos estables cuando decidas dejar de trabajar.
     </p>
 </section>
 
-<section id="gastos">
+<section>
     <h3>Gastos Médicos Mayores</h3>
     <p>
-        Contar con un seguro de gastos médicos te protege ante imprevistos
-        que pueden afectar seriamente tu patrimonio. Es una herramienta
-        fundamental para acceder a atención médica privada y recibir apoyo
-        financiero en momentos importantes para tu salud y la de tu familia.
+        Protección financiera ante enfermedades o accidentes,
+        con acceso a hospitales privados y atención médica de calidad.
     </p>
 </section>
 
-<section id="autos">
+<section>
     <h3>Seguro de Auto</h3>
     <p>
-        Proteger tu vehículo es proteger tu patrimonio. Un seguro de auto
-        brinda respaldo ante accidentes, daños a terceros y situaciones
-        inesperadas, permitiéndote conducir con mayor tranquilidad en tu día a día.
+        Respaldo ante accidentes, daños y responsabilidades,
+        protegiendo tu patrimonio y tu tranquilidad.
     </p>
 </section>
 
