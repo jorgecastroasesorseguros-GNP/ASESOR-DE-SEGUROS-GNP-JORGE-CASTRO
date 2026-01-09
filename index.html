@@ -1,212 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Jorge Castro | Asesor de Seguros GNP</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO -->
-    <meta name="description" content="Jorge Castro, Asesor de Seguros GNP. Planeación financiera, ahorro, retiro, gastos médicos y seguros de auto. Atención personalizada.">
-    <meta name="keywords" content="GNP, seguros, ahorro, retiro, gastos médicos, seguro de auto, asesor GNP">
-
-    <!-- Fuente -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
-            background: #fff;
-        }
-
-        /* HEADER */
-        header {
-            background: white;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        header h1 {
-            font-size: 20px;
-            margin: 0;
-            color: #f57c00;
-        }
-
-        nav {
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            text-decoration: none;
-            font-weight: 600;
-            color: #333;
-            padding-bottom: 5px;
-        }
-
-        nav a:hover {
-            color: #f57c00;
-            border-bottom: 2px solid #f57c00;
-        }
-
-        /* HERO */
-        .hero {
-            background: linear-gradient(135deg, #ff8f1f, #ff6f00);
-            color: white;
-            padding: 100px 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .hero-text {
-            max-width: 600px;
-        }
-
-        .hero-text h2 {
-            font-size: 44px;
-            margin-bottom: 20px;
-        }
-
-        .hero-text p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .btn-whatsapp {
-            display: inline-block;
-            margin-top: 30px;
-            background: #25D366;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .card {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 420px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            color: #333;
-        }
-
-        /* SECCIONES */
-        section {
-            padding: 80px 60px;
-        }
-
-        section h3 {
-            color: #f57c00;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        section p {
-            font-size: 17px;
-            line-height: 1.7;
-            max-width: 900px;
-        }
-
-        footer {
-            background: #f4f4f4;
-            padding: 40px;
-            text-align: center;
-            font-size: 14px;
-            color: #666;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Jorge Castro | Asesor GNP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
-<header>
-    <div style="display:flex; align-items:center; gap:15px;">
-        <img src="logo-gnp.png" alt="GNP Seguros" style="height:45px;">
-        <h1>Jorge Castro</h1>
-    </div>
+<!-- HEADER -->
+<header class="main-header">
+  <div class="logo-area">
+    <img src="img/logo-gnp.png">
+    <span>Jorge Castro | Asesor GNP</span>
+  </div>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="ahorro.html">Ahorro</a>
-        <a href="retiro.html">Retiro</a>
-        <a href="gastos-medicos.html">Gastos Médicos</a>
-        <a href="autos.html">Autos</a>
-        <a href="perfil.html">Mi Perfil</a>
-    </nav>
+  <nav class="main-nav">
+    <a href="index.html">Inicio</a>
+    <a href="perfil.html">Mi Perfil</a>
+    <a href="productos.html">Productos</a>
+    <a href="contacto.html" class="btn-contacto">Contacto</a>
+  </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-    <div class="hero-text">
-        <h2>Planeación financiera con respaldo profesional</h2>
-        <p>
-            Protección, ahorro y tranquilidad para ti y tu familia,
-            a través de soluciones financieras diseñadas a tu medida,
-            con el respaldo de GNP Seguros.
-        </p>
-
-        <a class="btn-whatsapp" href="https://wa.me/526121835809" target="_blank">
-            Hablar por WhatsApp
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>Asesoría personalizada</h3>
-        <p>
-            Diseño estrategias claras de acuerdo con tu edad,
-            ingresos y objetivos financieros.
-        </p>
-        <p>✔ Atención directa</p>
-        <p>✔ Sin compromiso</p>
-    </div>
+  <h1>Planeación financiera con respaldo GNP</h1>
+  <p>Protección, ahorro y tranquilidad para tu familia.</p>
 </section>
 
-<section>
-    <h3>Ahorro</h3>
-    <p>
-        Planes diseñados para crear disciplina financiera, cumplir metas
-        y generar estabilidad económica a mediano y largo plazo.
-    </p>
+<!-- RESUMEN -->
+<section class="resumen-productos">
+  <div><h3>Ahorro</h3><a href="ahorro.html">Ver más</a></div>
+  <div><h3>Retiro</h3><a href="retiro.html">Ver más</a></div>
+  <div><h3>Gastos Médicos</h3><a href="gastos-medicos.html">Ver más</a></div>
+  <div><h3>Autos</h3><a href="autos.html">Ver más</a></div>
 </section>
 
-<section>
-    <h3>Retiro</h3>
-    <p>
-        Estrategias enfocadas en mantener tu calidad de vida futura,
-        asegurando ingresos estables cuando decidas dejar de trabajar.
-    </p>
-</section>
-
-<section>
-    <h3>Gastos Médicos Mayores</h3>
-    <p>
-        Protección financiera ante enfermedades o accidentes,
-        con acceso a hospitales privados y atención médica de calidad.
-    </p>
-</section>
-
-<section>
-    <h3>Seguro de Auto</h3>
-    <p>
-        Respaldo ante accidentes, daños y responsabilidades,
-        protegiendo tu patrimonio y tu tranquilidad.
-    </p>
-</section>
-
-<footer>
-    <p>Jorge Castro – Asesor de Seguros GNP</p>
-    <p>Atención personalizada | Todo México</p>
-</footer>
-
+<footer>© Jorge Castro – Asesor GNP</footer>
 </body>
 </html>
+
